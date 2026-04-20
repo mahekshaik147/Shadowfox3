@@ -90,29 +90,51 @@ This will open a browser window. Then:
 
 ---
 
-## 3. Run on Google Colab (Recommended)
+## 🚀 Run on Google Colab (Recommended)
 
-1. Open Google Colab
-2. Click **Upload Notebook**
-3. Upload:
-
-   ```
-   Shadowfox3_BERT_Sentiment_Research.ipynb
-   ```
-4. Enable GPU:
-
-   ```
-   Runtime → Change runtime type → GPU
-   ```
-5. Install dependencies in a cell:
-
-   ```
-   !pip install torch transformers datasets scikit-learn matplotlib seaborn umap-learn tqdm
-   ```
-
-Run all cells for full execution.
+This project runs best on Google Colab with GPU support.
 
 ---
+
+### 1️⃣ Open Google Colab
+Go to: https://colab.research.google.com/
+
+---
+
+### 2️⃣ Clone the repository
+
+Run this in a new cell:
+
+```python
+!git clone https://github.com/mahekshaik147/Shadowfox3.git
+%cd Shadowfox3
+3️⃣ Install dependencies
+!pip install -r requirements.txt
+4️⃣ Open the notebook
+Click the 📁 (file icon) on the left sidebar
+Navigate to:
+Shadowfox3/notebooks/Shadowfox3_BERT_Sentiment_Research.ipynb
+5️⃣ Make it editable
+
+Click:
+
+File → Save a copy in Drive
+6️⃣ Fix import path (IMPORTANT)
+
+Add this at the top of the notebook:
+
+import sys, os
+sys.path.append("/content/Shadowfox3")
+7️⃣ Enable GPU
+
+Go to:
+
+Runtime → Change runtime type → T4 GPU
+8️⃣ Run the notebook
+
+Click:
+
+Runtime → Run all
 
 ## 4. Use Modules Independently
 
