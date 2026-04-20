@@ -1,0 +1,23 @@
+# Core
+torch>=2.0
+transformers>=4.40
+datasets>=2.18
+tokenizers>=0.15
+
+# Classical ML / baselines
+scikit-learn>=1.3
+numpy>=1.24
+pandas>=2.0
+
+# Visualization
+matplotlib>=3.7
+seaborn>=0.12
+umap-learn>=0.5
+
+# Notebook
+jupyterlab>=4.0
+ipywidgets>=8.0
+tqdm>=4.65
+
+# Optional: attention viz
+bertviz>=1.4
