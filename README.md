@@ -50,27 +50,73 @@ Shadowfox3/
 
 ## 🚀 Quick Start
 
-### 1. Environment
+🚀 Quick Start
 
-Python ≥ 3.9 recommended. GPU strongly recommended for fine-tuning
-(Colab Free T4 is enough — the notebook detects GPU automatically).
+## 1. Environment
 
-```bash
+Python ≥ 3.9 recommended. GPU strongly recommended for fine-tuning (Google Colab Free T4 is sufficient — the notebook detects GPU automatically).
+
+Install dependencies:
+
+```
 pip install -r requirements.txt
 ```
 
-### 2. Run the notebook
+---
 
-```bash
-jupyter lab notebooks/Shadowfox3_BERT_Sentiment_Research.ipynb
+## 2. Run the Notebook (Local System)
+
+Navigate to the project folder:
+
+```
+cd Shadowfox3
 ```
 
-Or open it directly in **Google Colab**:
-`File → Upload Notebook → Shadowfox3_BERT_Sentiment_Research.ipynb`
+Start Jupyter Notebook:
 
-The notebook is fully self-contained and walks through all 9 experiments end-to-end.
+```
+python -m notebook
+```
 
-### 3. Use the modules independently
+This will open a browser window. Then:
+
+* Go to `notebooks/`
+* Open `Shadowfox3_BERT_Sentiment_Research.ipynb`
+* Click **Run → Run All Cells**
+
+⚠️ Note:
+
+* On CPU, training can be slow. Set `EPOCHS = 1` in the notebook for quick testing.
+
+---
+
+## 3. Run on Google Colab (Recommended)
+
+1. Open Google Colab
+2. Click **Upload Notebook**
+3. Upload:
+
+   ```
+   Shadowfox3_BERT_Sentiment_Research.ipynb
+   ```
+4. Enable GPU:
+
+   ```
+   Runtime → Change runtime type → GPU
+   ```
+5. Install dependencies in a cell:
+
+   ```
+   !pip install torch transformers datasets scikit-learn matplotlib seaborn umap-learn tqdm
+   ```
+
+Run all cells for full execution.
+
+---
+
+## 4. Use Modules Independently
+
+You can also use project modules directly:
 
 ```python
 from src.data import load_sst2
@@ -83,6 +129,22 @@ train_model(model, train_loader, val_loader, epochs=3)
 ```
 
 ---
+
+## ⚠️ Troubleshooting
+
+* If `jupyter` command is not recognized:
+
+  ```
+  python -m notebook
+  ```
+
+* If training is slow:
+
+  * Reduce epochs
+  * Use Google Colab GPU
+
+---
+
 
 ## 🧪 Experiments Included
 
