@@ -96,41 +96,49 @@ This project runs best on Google Colab with GPU support.
 
 ---
 
-### 1️⃣ Open Google Colab
-Go to: https://colab.research.google.com/
+
+1. Environment
+Google Colab is recommended for this project. GPU acceleration (T4) is sufficient for fine-tuning and is automatically detected in the notebook.
 
 ---
 
-### 2️⃣ Clone the repository
+2. Open the Project in Colab
 
-Run this in a new cell:
+Go to:
+https://colab.research.google.com/
+
+Create a new notebook and run:
 
 ```python
 !git clone https://github.com/mahekshaik147/Shadowfox3.git
 %cd Shadowfox3
-3️⃣ Install dependencies
+Install Dependencies
 !pip install -r requirements.txt
-4️⃣ Open the notebook
+Open the Notebook
+
 Click the 📁 (file icon) on the left sidebar
 Navigate to:
 Shadowfox3/notebooks/Shadowfox3_BERT_Sentiment_Research.ipynb
-5️⃣ Make it editable
+
+Make Notebook Editable
 
 Click:
 
 File → Save a copy in Drive
-6️⃣ Fix import path (IMPORTANT)
+
+Fix Import Path (IMPORTANT)
 
 Add this at the top of the notebook:
 
 import sys, os
 sys.path.append("/content/Shadowfox3")
-7️⃣ Enable GPU
+Enable GPU
 
 Go to:
 
 Runtime → Change runtime type → T4 GPU
-8️⃣ Run the notebook
+
+Run the Notebook
 
 Click:
 
